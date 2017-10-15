@@ -1,0 +1,43 @@
+﻿@using Deliverables.Models
+@using DeliverableWeb.Features.Home
+
+@section scripts {
+    <script>
+        var trucksVm = new TrucksViewModel(window.jQuery);
+        var deliveriesVm = new DeliveriesViewModel(window.jQuery);
+        var indexVm = new IndexViewModel(window.jQuery);
+        var simulationVm = new SimulationViewModel(window.jQuery);
+    </script>
+}
+
+<div class="jumbotron text-center">
+    <h1>The Great Delivery Simulator!</h1>
+    <p>
+        Add vehicles and deliveries, then run the simulation.
+        Just hope there are no wrecks.
+    </p>
+</div>
+
+<div id="main-body">
+
+    <div class="row">
+
+        <div class="row col-md-6">
+            <div class="col-md-11">
+                @Html.Partial("_Trucks")
+            </div>
+        </div>
+
+        <div class="row col-md-6 col-md-push-1">
+            <div class="col-md-11">
+                @Html.Partial("_Deliveries")
+            </div>
+        </div>
+    </div>
+    
+    <div class="spacer"></div>
+
+    <div class="row">
+        <button onclick="indexVm.runSimulation()" class="btn btn-lg col-md-6 col-md-push-3 btn-warning">Run Simulation!</button>
+    </div>
+</div>

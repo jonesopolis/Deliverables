@@ -1,0 +1,59 @@
+﻿@model DeliverableWeb.Features.Home.SimulationCompleteViewModel
+
+<h1>Simulation Complete!</h1>
+
+<div class="row well">
+
+    <div class="row">
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Truck Name</th>
+                <th>Delivery</th>
+                <th>Departure Time</th>
+                <th>Completed Time</th>
+                <th>Travel Time</th>
+                <th>Total Time Travelled</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var truck in Model.Trucks)
+            {
+                <tr>
+                    <td>@truck.Name</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                foreach (var delivery in truck.Deliveries)
+                {
+                    <tr>
+                        <td></td>
+                        <td class="text-center">@delivery.TrackingNumber</td>
+                        <td class="text-center">@delivery.DepartureTime</td>
+                        <td class="text-center">@(delivery.DepartureTime + delivery.HoursToComplete)</td>
+                        <td class="text-center">@delivery.HoursToComplete</td>
+                        <td></td>
+                    </tr>
+                }
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="text-center">( @truck.TotalTravelTime )</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+
+    </div>
+    
+    <a asp-controller="Home" asp-action="Index" class="btn btn-warning">Start Over</a>
+
+</div>

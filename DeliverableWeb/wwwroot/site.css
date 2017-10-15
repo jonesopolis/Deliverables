@@ -1,0 +1,24 @@
+﻿.red {
+    background-color: #ff4439;
+}
+
+.blue {
+    background-color: #57a3fd;
+}
+
+.gray {
+    background-color: #b1b1b1;
+}
+
+.margin-side {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.spacer {
+    margin-top: 90px;
+}

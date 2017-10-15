@@ -1,0 +1,26 @@
+﻿[
+  {
+    "outputFileName": "wwwroot/site.min.css",
+    "inputFiles": [
+      "wwwroot/site.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  },
+  {
+    "outputFileName": "wwwroot/site.min.js",
+    "inputFiles": [
+      "Features/Home/IndexViewModel.js",
+      "Features/Home/DeliveriesViewModel.js",
+      "Features/Home/TrucksViewModel.js",
+      "Features/Home/SimulationViewModel.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": false
+  }
+]

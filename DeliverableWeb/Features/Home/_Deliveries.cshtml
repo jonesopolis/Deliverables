@@ -1,0 +1,40 @@
+﻿
+<h1 class="text-center">Deliveries</h1>
+
+<div class="well row">
+    
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Time To Complete (Hours)</th>
+            <th>Remove</th>
+        </tr>
+        </thead>
+        <tbody id="delivery-list"></tbody>
+    </table>
+    
+    <div class="row">
+        <button id="new-delivery" class="btn btn-lg btn-success col-md-4 col-md-push-4" data-toggle="modal" data-target="#delivery-modal">+ Delivery</button>
+    </div>
+</div>
+
+
+<div id="delivery-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add Delivery</h4>
+            </div>
+            <div class="modal-body">
+                <label>Hours to Complete:</label>
+                <input type="text" class="form-control" id="delivery-hours" />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick="deliveriesVm.addDelivery($('#delivery-hours').val())" data-dismiss="modal" id="add-delivery" disabled>Add Delivery</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+
+    </div>
+</div>

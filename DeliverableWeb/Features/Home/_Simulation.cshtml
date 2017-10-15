@@ -1,0 +1,79 @@
+﻿@model DeliverableWeb.Features.Home.SimulationViewModel
+
+<h1>Simulation</h1>
+
+<div class="row well">
+
+    @if (!Model.Valid)
+    {
+        <div class="alert alert-danger">
+            <h4>Invalid Simulation!</h4>
+
+            @foreach (var error in Model.Errors)
+            {
+                <p>- @error</p>
+            }
+        </div>
+
+        <a asp-controller="Home" asp-action="Index" class="btn btn-warning">Start Over</a>
+    }
+    else
+    {
+        <script>simulationVm.run()</script>
+
+        <div class="jumbotron">
+            <h1 class="text-center underline">Hour</h1>
+            <h1 class="text-center" id="simulation-hour">0</h1>
+        </div>
+
+        <div class="row">
+            
+            <h1>Trucks</h1>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Current Delivery</th>
+                    <th>Hours Left To Complete</th>
+                </tr>
+                </thead>
+                <tbody id="simulation-trucks">
+                @foreach (var truck in Model.Trucks)
+                {
+                    <tr>
+                        <td>@truck.Name</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+
+            <br/>
+
+            <h1>Deliveries</h1>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Hours</th>
+                    <th>Tracking Number</th>
+                    <th>Status</th>
+                </tr>
+                </thead>
+                <tbody id="simulation-deliveries">
+                @foreach (var delivery in Model.Deliveries)
+                {
+                    <tr>
+                        <td>@delivery.HoursToComplete</td>
+                        <td>N/A</td>
+                        <td>N/A</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    }
+
+</div>

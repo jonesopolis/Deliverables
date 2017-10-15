@@ -1,0 +1,39 @@
+﻿<html>
+<head>
+    <title>Delivery Simulator!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/site.min.css"/>
+</head>
+<body class="container">
+    
+<style>
+    body {
+        padding-top: 54px;
+    }
+ </style>
+    
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">The Delivery Simulator!</a>
+        </div>
+        
+    </div>
+</nav>
+
+<div class="container">
+      @RenderBody()
+</div>
+    
+    
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="~/signalr-client.min.js"></script>
+
+<script src="~/site.min.js"></script>
+@RenderSection("scripts")
+
+
+</body>
+</html>
