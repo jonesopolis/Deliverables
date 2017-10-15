@@ -32,7 +32,7 @@ The application consists of a Console Application that can automate a delivery s
 - To Run
     - Ensure you have .NET Core 2.0 installed
     - building the application will run the bundler, building the site.min.css and site.min.js
-
+    - alternatively you can navigate to the DeliverablesWeb folder and use the 'dotnet run' command from the command line
 ##### Console
 - the console app was developed simply to demonstrate the value of reusable code in the simulator
 
